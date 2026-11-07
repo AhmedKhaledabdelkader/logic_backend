@@ -28,6 +28,14 @@ Route::prefix('admin/about-page')->group(base_path('routes/apis/about_page.php')
 
 
 
+Route::prefix('admin/services')->group(base_path('routes/apis/service.php'));
+
+
+
+Route::prefix('admin/how-we-work')->group(base_path('routes/apis/work_step.php'));
+
+
+
 Route::prefix('/contact')->group(base_path('routes/apis/contact.php'));
 
 

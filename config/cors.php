@@ -10,7 +10,7 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
-        'https://ahmedkhaledabdelkader.github.io',
+        '*'
     ],
 
     'allowed_origins_patterns' => [],

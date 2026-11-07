@@ -8,16 +8,20 @@ use App\Repositories\Contracts\ContactRepositoryInterface;
 use App\Repositories\Contracts\HeroSlideRepositoryInterface;
 use App\Repositories\Contracts\InsightRepositoryInterface;
 use App\Repositories\Contracts\RegionalRepositoryInterface;
+use App\Repositories\Contracts\ServiceRepositoryInterface;
 use App\Repositories\Contracts\StatisticRepositoryInterface;
 use App\Repositories\Contracts\VideoContentRepositoryInterface;
+use App\Repositories\Contracts\WorkStepRepositoryInterface;
 use App\Repositories\Eloquents\AboutPageRepository;
 use App\Repositories\Eloquents\AuthRepository;
 use App\Repositories\Eloquents\ContactRepository;
 use App\Repositories\Eloquents\HeroSlideRepository;
 use App\Repositories\Eloquents\InsightRepository;
 use App\Repositories\Eloquents\RegionalRepository;
+use App\Repositories\Eloquents\ServiceRepository;
 use App\Repositories\Eloquents\StatisticRepository;
 use App\Repositories\Eloquents\VideoContentRepository;
+use App\Repositories\Eloquents\WorkStepRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -76,7 +80,17 @@ class AppServiceProvider extends ServiceProvider
               $this->app->bind(
             AuthRepositoryInterface::class,
             AuthRepository::class
-          
+
+        );
+
+        $this->app->bind(
+            ServiceRepositoryInterface::class,
+            ServiceRepository::class
+        );
+
+        $this->app->bind(
+            WorkStepRepositoryInterface::class,
+            WorkStepRepository::class
         );
 
         
